@@ -9,16 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [9.1.1] - 2026-08-27
 
-### Added — CI/CD (GitHub Actions)
-- **`.github/workflows/ci.yml`** — runs on every push to `main`/`develop` and on every PR.
-  Restores + builds the full 13-project solution + runs smoke tests + verifies every sample
-  service DLL was produced. Runs in <2 minutes on `ubuntu-latest` because there's no Docker
-  layer to build (compare to typical microservices CI: 5-15 minutes for container images).
-- **`.github/workflows/release.yml`** — runs when you push a tag like `v9.1.0`. Runs the same
-  build + test gate, then packages a source-only zip (`faas-3.3.2.1-{tag}.zip`, excludes
-  bin/obj/.git) and creates a GitHub Release with the zip + CHANGELOG.md attached. The
-  release body is auto-extracted from the CHANGELOG.md entry for that version.
-  - Prerelease detection: tags containing `-` (e.g. `v9.2.0-rc.1`) are marked as prerelease.
+### updated features
+
 - **`test/Artichoke.FaaS.SmokeTests/`** — new xUnit project (11 tests, ~317ms total runtime)
   covering:
   - `FunctionHost.Register` / `List` / `IsRegistered` (registry behavior)
