@@ -1,4 +1,4 @@
-# Artichoke-FaaS
+# FaasNet
 
 > Microservices and event-driven architecture without Docker, without Kubernetes, without a cloud account. Just .NET 9 processes and a ~400-line supervisor.
 
