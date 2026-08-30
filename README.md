@@ -12,9 +12,6 @@ A small .NET 9 framework + supervisor for running event-driven microservices as 
 
 If you've ever wanted microservices-grade isolation (process boundaries, independent deployment, auto-restart) without standing up Docker / minikube / k3s / a managed Kubernetes cluster — this is that.
 
-### The pitch in one paragraph
-
-For 25 years the industry has trained developers that "microservices" means "Docker containers." It doesn't. Microservices = process boundaries + HTTP + a supervisor. The OS has given you the first one for free since 1969. .NET gives you the second one in the box. This project wrote the third one in ~400 lines. No Docker daemon, no `kubectl`, no Helm charts, no Azure subscription, no cold starts, no per-invocation billing.
 
 ## What's in the repo
 
