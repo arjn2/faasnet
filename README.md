@@ -2,7 +2,7 @@
 
 > Microservices and event-driven architecture without Docker, without Kubernetes, without a cloud account. Just .NET 9 processes and a ~400-line supervisor.
 
-**Version:** 9.1.1 — built, tested, and demoed end-to-end on Debian 13 / .NET 9.0.317.
+**Version:** 9.1.1 — built, tested, and demoed end-to-end on Debian with .NET 9 
 
 ## What this is
 
