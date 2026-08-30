@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>BMS.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- BMS.Core.Events.IDomainEvent extends Artichoke.FaaS.Core.Interfaces.IDomainEvent. -->
+    <ProjectReference Include="..\..\..\Artichoke.FaaS.Core\Artichoke.FaaS.Core.csproj" />
+  </ItemGroup>
+</Project>

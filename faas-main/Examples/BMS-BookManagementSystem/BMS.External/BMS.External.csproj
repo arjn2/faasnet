@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BMS.Core\BMS.Core.csproj" />
+    <ProjectReference Include="..\BMS.Interface\BMS.Interface.csproj" />
+    <ProjectReference Include="..\..\..\Artichoke.FaaS.Core\Artichoke.FaaS.Core.csproj" />
+    <ProjectReference Include="..\..\..\Artichoke.FaaS.Runtime\Artichoke.FaaS.Runtime.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.7" />
+  </ItemGroup>
+</Project>

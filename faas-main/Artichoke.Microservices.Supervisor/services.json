@@ -1,0 +1,46 @@
+{
+  "Services": [
+    {
+      "Name": "audit",
+      "DllPath": "/home/z/my-project/test-v910/faas-3.3.2.1/Examples/MicroservicesDemo/AuditService/bin/Release/net9.0/AuditService.dll",
+      "Port": 5001,
+      "Instances": 1
+    },
+    {
+      "Name": "orders",
+      "DllPath": "/home/z/my-project/test-v910/faas-3.3.2.1/Examples/MicroservicesDemo/OrderService/bin/Release/net9.0/OrderService.dll",
+      "Port": 5002,
+      "Instances": 1
+    },
+    {
+      "Name": "aircraft",
+      "DllPath": "/home/z/my-project/test-v910/faas-3.3.2.1/Examples/FlightSimDemo/AircraftService/bin/Release/net9.0/AircraftService.dll",
+      "Port": 5101,
+      "Instances": 1
+    },
+    {
+      "Name": "atc",
+      "DllPath": "/home/z/my-project/test-v910/faas-3.3.2.1/Examples/FlightSimDemo/AtcService/bin/Release/net9.0/AtcService.dll",
+      "Port": 5102,
+      "Instances": 1
+    },
+    {
+      "Name": "weather",
+      "DllPath": "/home/z/my-project/test-v910/faas-3.3.2.1/Examples/FlightSimDemo/WeatherService/bin/Release/net9.0/WeatherService.dll",
+      "Port": 5103,
+      "Instances": 1
+    },
+    {
+      "Name": "scoring",
+      "DllPath": "/home/z/my-project/test-v910/faas-3.3.2.1/Examples/FlightSimDemo/ScoringService/bin/Release/net9.0/ScoringService.dll",
+      "Port": 5104,
+      "Instances": 1
+    },
+    {
+      "Name": "persistence",
+      "DllPath": "/home/z/my-project/test-v910/faas-3.3.2.1/Examples/FlightSimDemo/PersistenceService/bin/Release/net9.0/PersistenceService.dll",
+      "Port": 5105,
+      "Instances": 1
+    }
+  ]
+}

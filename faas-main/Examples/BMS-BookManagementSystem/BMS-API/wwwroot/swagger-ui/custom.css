@@ -1,0 +1,185 @@
+/* Custom Swagger UI Styling for BMS Artichoke-FaaS API */
+
+/* Header styling */
+.swagger-ui .topbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-bottom: 3px solid #4f46e5;
+}
+
+.swagger-ui .topbar .download-url-wrapper {
+    display: none;
+}
+
+/* Info section styling */
+.swagger-ui .info {
+    margin: 20px 0;
+}
+
+.swagger-ui .info .title {
+    color: #1e40af;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.swagger-ui .info .description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #374151;
+}
+
+/* Operation styling */
+.swagger-ui .opblock.opblock-post {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.swagger-ui .opblock.opblock-get {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.swagger-ui .opblock.opblock-put {
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.swagger-ui .opblock.opblock-delete {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Function-specific styling */
+.swagger-ui .opblock-tag {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.swagger-ui .opblock-tag[data-tag*="Functions"] {
+    color: #7c3aed;
+}
+
+.swagger-ui .opblock-tag[data-tag*="System"] {
+    color: #059669;
+}
+
+.swagger-ui .opblock-tag[data-tag*="Cli"] {
+    color: #dc2626;
+}
+
+.swagger-ui .opblock-tag[data-tag*="Auth"] {
+    color: #0891b2;
+}
+
+/* Response styling */
+.swagger-ui .responses-inner h4,
+.swagger-ui .responses-inner h5 {
+    color: #1f2937;
+}
+
+/* Authorization button styling */
+.swagger-ui .btn.authorize {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 8px 16px;
+}
+
+.swagger-ui .btn.authorize:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+/* Try it out button styling */
+.swagger-ui .btn.try-out__btn {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Schema styling */
+.swagger-ui .model-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+/* Custom badges for different API versions */
+.swagger-ui .info .title::after {
+    content: "";
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 8px;
+    background: #10b981;
+    color: white;
+    font-size: 0.7em;
+    border-radius: 12px;
+    font-weight: normal;
+}
+
+/* V4 API specific styling */
+.swagger-ui .info[data-version="v4"] .title::after {
+    content: "?? LATEST";
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+}
+
+/* Artichoke API styling */
+.swagger-ui .info[data-version="artichoke"] .title::after {
+    content: "?? CLEAN";
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+/* FaaS API styling */
+.swagger-ui .info[data-version="faas"] .title::after {
+    content: "? INTERNAL";
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* Response code styling */
+.swagger-ui .response-col_status {
+    font-weight: bold;
+}
+
+.swagger-ui .response-col_status[data-code="200"] {
+    color: #10b981;
+}
+
+.swagger-ui .response-col_status[data-code="201"] {
+    color: #10b981;
+}
+
+.swagger-ui .response-col_status[data-code="400"] {
+    color: #f59e0b;
+}
+
+.swagger-ui .response-col_status[data-code="401"] {
+    color: #ef4444;
+}
+
+.swagger-ui .response-col_status[data-code="404"] {
+    color: #6b7280;
+}
+
+.swagger-ui .response-col_status[data-code="500"] {
+    color: #dc2626;
+}
+
+/* Custom scrollbar */
+.swagger-ui ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.swagger-ui ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.swagger-ui ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.swagger-ui ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
