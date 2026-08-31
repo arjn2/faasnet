@@ -246,26 +246,7 @@ app.Run();
 
 That's it. The supervisor doesn't know or care how the service is implemented — only that it has `/health` and listens on the configured port.
 
-## Comparison to managed FaaS
 
-| | Azure Functions (Consumption) | OpenFaaS | **v9.1.1** |
-|---|---|---|---|
-| Cloud account | required | self-hosted | not needed |
-| Docker | no | required | **not needed** |
-| Kubernetes | no | required (prod) | **not needed** |
-| Cold start | 1-5 s | 200-2000 ms | none (always warm) |
-| Warm HTTP call | 1-50 ms | 1-20 ms | ~5 ms (cross-service) |
-| Process isolation | per function | per container | per service |
-| Auto-restart | DIY | yes | yes |
-| Scale-to-zero | yes | yes | no (services stay warm) |
-| Multi-language | yes | yes | .NET only |
-
-## What it's NOT
-
-- **Not a drop-in Azure Functions replacement.** No scale-to-zero, no per-call billing, no multi-language, no cloud integration. If you want serverless, use serverless.
-- **Not a competitor to Dapr / Istio / Linkerd.** Those are service meshes for hyperscale cross-machine deployments. This is for one machine (or a small fleet) with .NET on it.
-- **Not a containerization tool.** If you need containers for security isolation, filesystem isolation, or multi-language runtimes, use containers.
-- **Not production-hardened.** It's a working proof-of-concept with tests. Use it for prototypes, internal tools, learning. Audit it before betting a real product on it.
 
 ## Roadmap
 
