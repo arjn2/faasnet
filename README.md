@@ -35,35 +35,6 @@ If you've ever wanted microservices-grade isolation (process boundaries, indepen
 - `curl` (for the examples below). On Linux also `ss`/`lsof` to find child PIDs.
 - **No Docker. No Kubernetes. No SQL Server** required for the supervisor demos (the BMS sample does need a database — see its own README).
 
-## Installation
-
-```bash
-# 1. Extract the source
-unzip faas-main.zip -d faas
-cd faas/faas-main
-
-# 2. Restore + build all 13 projects (Core, Runtime, Supervisor, 7 demo services, smoke tests)
-dotnet build Artichoke-FaaS-Platform.sln --configuration Release
-# Expect: 0 warnings, 0 errors, ~10 s on a warm machine.
-
-# 3. Fix services.json — it ships with hardcoded absolute paths that won't match your machine.
-#    Replace the placeholder below with the absolute path to your faas-main directory:
-ROOT=$(pwd)
-sed -i "s|/home/z/my-project/test-v910/faas-3.3.2.1|${ROOT}|g" \
-    Artichoke.Microservices.Supervisor/services.json
-
-# 4. The supervisor loads services.json from its own bin directory, not the source tree.
-#    Copy the (now-fixed) config next to the built DLL:
-cp Artichoke.Microservices.Supervisor/services.json \
-   Artichoke.Microservices.Supervisor/bin/Release/net9.0/services.json
-
-# 5. Run the smoke tests to confirm the framework itself works:
-dotnet test test/Artichoke.FaaS.SmokeTests/Artichoke.FaaS.SmokeTests.csproj --configuration Release
-# Expect: 11 passed, ~2 s.
-```
-
-If `services.json` still references missing DLLs, the supervisor will crash on startup with `FileNotFoundException: Service DLL not found: ...` — re-check step 3.
-
 ## Usage
 
 ### A. Start the supervisor (spawns all 7 demo services)
