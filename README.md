@@ -287,6 +287,3 @@ Items 1-3 are 1-2 weeks. Items 4-6 are 1-2 months. Item 7 is a few days.
 
 MIT — see [LICENSE.txt](LICENSE.txt).
 
-## Acknowledgments
-
-The Artichoke architecture (Core / Interface / External layers, DDD-style domain events) came from the original BMS-API project by [@arlack9](https://github.com/arlack9). The v9.x refactor (FaaS framework + supervisor + flight sim demo) was built on top of it.
