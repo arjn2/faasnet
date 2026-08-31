@@ -247,21 +247,6 @@ app.Run();
 That's it. The supervisor doesn't know or care how the service is implemented — only that it has `/health` and listens on the configured port.
 
 
-
-## Roadmap
-
-What it would take to make this a real framework (in priority order):
-
-1. **CLI** — `faas add`, `faas list`, `faas logs`, `faas scale`, `faas restart`. ~200 lines, System.CommandLine.
-2. **Hot reload** — drop a new DLL, supervisor auto-restarts just that service. ~150 lines.
-3. **Typed inter-service RPC** — `IServiceProxy<T>` via DispatchProxy so cross-service calls are typed. ~300 lines.
-4. **Cross-process event bus** — Redis Streams or NATS-backed `IDomainEventBus`. ~500 lines.
-5. **Multi-machine clustering** — multiple supervisors, gossip protocol, shared service registry. ~2000 lines.
-6. **OpenTelemetry** — distributed tracing across service calls. ~500 lines.
-7. **gRPC** — for high-throughput inter-service calls (5x faster than HTTP). ~400 lines.
-
-Items 1-3 are 1-2 weeks. Items 4-6 are 1-2 months. Item 7 is a few days.
-
 ## License
 
 MIT — see [LICENSE.txt](LICENSE.txt).
