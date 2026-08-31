@@ -2,13 +2,11 @@
 
 > Note: this is an experimental stage , not production ready.
 
-> Microservices and event-driven architecture without Docker, without Kubernetes, without a cloud account. Just .NET 9 processes and a ~400-line supervisor.
-
 **Version:** 9.1.1 — built, tested, and demoed end-to-end on Debian with .NET 9 
 
 ## What this is
 
-A small .NET 9 framework + supervisor for running event-driven microservices as **plain OS processes** — no containers, no orchestration layer, no per-call billing. The supervisor spawns your services via `dotnet exec`, monitors their `/health` endpoint, restarts them on crash, and exposes a single HTTP gateway that routes `/api/{service}/*` to the right child port.
+A small .NET 9 framework + supervisor for running event-driven microservices as **plain OS processes**  The supervisor spawns your services via `dotnet exec`, monitors their `/health` endpoint, restarts them on crash, and exposes a single HTTP gateway that routes `/api/{service}/*` to the right child port.
 
 If you've ever wanted microservices-grade isolation (process boundaries, independent deployment, auto-restart) without standing up Docker / minikube / k3s / a managed Kubernetes cluster — this is that.
 
