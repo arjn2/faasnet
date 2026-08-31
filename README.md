@@ -28,12 +28,6 @@ If you've ever wanted microservices-grade isolation (process boundaries, indepen
 | `FaaS-ACTIONS-TRIGGERS.md` | Reference for built-in triggers and action types |
 | `CHANGELOG.md` | Version history |
 
-## Prerequisites
-
-- **.NET 9 SDK** (9.0.x or higher). Download from <https://dotnet.microsoft.com/download/dotnet/9.0>.
-- Linux / macOS / Windows. Tested on Debian 13 (trixie) x86_64 with .NET 9.0.317.
-- `curl` (for the examples below). On Linux also `ss`/`lsof` to find child PIDs.
-- **No Docker. No Kubernetes. No SQL Server** required for the supervisor demos (the BMS sample does need a database — see its own README).
 
 ## Usage
 
